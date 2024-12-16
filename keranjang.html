@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja - Camille Beauty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Camille Beauty</h1>
+        <p>Tempat Belanja Produk Beauty Terpercaya</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="promo.html">Promo</a>
+        <a href="produk.html">Product</a>
+        <a href="keranjang.html" class="active">Keranjang</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <section id="keranjang" class="container">
+        <h2>Keranjang Belanja Anda</h2>
+        <div id="cartItems" class="product-grid"></div>
+        <div id="totalPrice">
+            <h3>Total Harga: <span id="totalAmount">Rp 0</span></h3>
+        </div>
+        <button id="checkout" class="button">Checkout</button>
+        <p id="message"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Camille Beauty | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Fungsi untuk menampilkan item keranjang
+        function loadCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.getElementById('cartItems');
+            const totalPriceContainer = document.getElementById('totalAmount');
+
+            // Clear existing items
+            cartItemsContainer.innerHTML = '';
+            let totalPrice = 0;
+
+            // Display cart items
+            cart.forEach(item => {
+                const productElement = document.createElement('div');
+                productElement.classList.add('product-item');
+                productElement.innerHTML = `
+                    <h4>${item.name}</h4>
+                    <p>Harga: Rp ${item.price}</p>
+                    <p>Kuantitas: ${item.quantity}</p>
+                `;
+                cartItemsContainer.appendChild(productElement);
+
+                totalPrice += item.price * item.quantity;
+            });
+
+            totalPriceContainer.textContent = `Rp ${totalPrice}`;
+        }
+
+        // Menampilkan keranjang saat halaman dimuat
+        window.onload = function () {
+            loadCart();
+        };
+
+        // Menangani aksi checkout
+        document.getElementById('checkout').addEventListener('click', function () {
+            // Kosongkan keranjang di localStorage
+            localStorage.removeItem('cart');
+            
+            // Tampilkan pesan notifikasi
+            const message = document.getElementById('message');
+            message.textContent = 'Pesanan Anda sedang dipacking!';
+            message.style.color = 'blue';  // Ganti warna teks menjadi biru untuk menunjukkan proses sedang berjalan
+
+            // Kosongkan item dan harga di halaman setelah checkout
+            document.getElementById('cartItems').innerHTML = '';
+            document.getElementById('totalAmount').textContent = 'Rp 0';
+        });
+    </script>
+</body>
+</html>

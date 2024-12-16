@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Camille Beauty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Camille Beauty</h1>
+        <p>Tempat Belanja Produk Beauty Terpercaya</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="promo.html">Promo</a>
+        <a href="produk.html" class="active">Product</a>
+        <a href="keranjang.html">Keranjang</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <section id="produk" class="container">
+        <h2>Produk Kami</h2>
+        <div class="filter">
+            <label for="filterKategori">Filter Kategori:</label>
+            <select id="filterKategori">
+                <option value="all">Semua</option>
+                <option value="skincare">Skincare</option>
+                <option value="makeup">Makeup</option>
+            </select>
+        </div>
+        <div id="productGrid" class="product-grid">
+            <div class="product-item" data-category="skincare" data-id="1" data-name="Face Mist" data-price="31900">
+                <img src="images/MASKER CAMILLE.jpeg" alt="MASKER CAMILLE" style="width: 400px; height: auto;">
+                <h3>MASKER CAMILLE</h3>
+                <p>Rp 24.900</p>
+                <button class="button add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="product-item" data-category="skincare" data-id="2" data-name="Lip Tint" data-price="41900">
+                <img src="images/FACE MIST.jpeg" alt="FACE MIST" style="width: 400px; height: auto;">
+                <h3>FACE MIST</h3>
+                <p>Rp 31.900</p>
+                <button class="button add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="product-item" data-category="skincare" data-id="3" data-name="Masker Wajah" data-price="24900">
+                <img src="images/FACIAL WASH.jpg" alt="FACIAL WASH" style="width: 400px; height: auto;">
+                <h3>FACIAL WASH</h3>
+                <p>Rp 80.750</p>
+                <button class="button add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="product-item" data-category="skincare" data-id="3" data-name="Masker Wajah" data-price="24900">
+                <img src="images/TONER.jpg" alt="TONER" style="width: 400px; height: auto;">
+                <h3>TONER</h3>
+                <p>Rp 71.250</p>
+                <button class="button add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="product-item" data-category="skincare" data-id="3" data-name="Masker Wajah" data-price="24900">
+                <img src="images/MOUSTURIZER.jpg" alt="MOUSTURIZER" style="width: 400px; height: auto;">
+                <h3>MOUSTURIZER</h3>
+                <p>Rp 76.000</p>
+                <button class="button add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="product-item" data-category="skincare" data-id="3" data-name="Masker Wajah" data-price="24900">
+                <img src="images/SERUM.jpeg" alt="SERUM" style="width: 400px; height: auto;">
+                <h3>SERUM</h3>
+                <p>Rp 80.750</p>
+                <button class="button add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="product-item" data-category="skincare" data-id="3" data-name="Masker Wajah" data-price="24900">
+                <img src="images/DAY CREAM.jpg" alt="DAY CREAM" style="width: 400px; height: auto;">
+                <h3>DAY CREAM</h3>
+                <p>Rp 86.000</p>
+                <button class="button add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="product-item" data-category="skincare" data-id="3" data-name="Masker Wajah" data-price="24900">
+                <img src="images/NIGHT CREAM.jpg" alt="NIGHT CREAM" style="width: 400px; height: auto;">
+                <h3>NIGHT CREAM</h3>
+                <p>Rp 76.000</p>
+                <button class="button add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="product-item" data-category="skincare" data-id="3" data-name="Masker Wajah" data-price="24900">
+                <img src="images/MASKER CAMILLE.jpeg" alt="Produk Masker Wajah" style="width: 100%; height: auto;">
+                <h3>Masker Wajah</h3>
+                <p>Rp 24.900</p>
+                <button class="button add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="product-item" data-category="skincare" data-id="3" data-name="Masker Wajah" data-price="24900">
+                <img src="images/BODY SCRUBE.jpg" alt="BODY SCRUBE" style="width: 400px; height: auto;">
+                <h3>BODY SCRUBE</h3>
+                <p>Rp 75.000</p>
+                <button class="button add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="product-item" data-category="skincare" data-id="3" data-name="Masker Wajah" data-price="24900">
+                <img src="images/LOTION.jpg" alt="LOTION" style="width: 400px; height: auto;">
+                <h3>LOTION</h3>
+                <p>Rp 71.250</p>
+                <button class="button add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="product-item" data-category="makeup" data-id="3" data-name="Masker Wajah" data-price="24900">
+                <img src="images/LIP TINT.jpeg" alt="LIP TINT" style="width: 400px; height: auto;">
+                <h3>LIP TINT</h3>
+                <p>Rp 41.900</p>
+                <button class="button add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Camille Beauty | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        const filterKategori = document.getElementById('filterKategori');
+        const products = document.querySelectorAll('.product-item');
+
+        filterKategori.addEventListener('change', function () {
+            const category = this.value;
+            products.forEach(product => {
+                const productCategory = product.dataset.category;
+                product.style.display = (category === 'all' || productCategory === category) ? 'block' : 'none';
+            });
+        });
+
+        // Fungsi untuk menambahkan produk ke keranjang
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const productItem = this.closest('.product-item');
+                const productId = productItem.dataset.id;
+                const productName = productItem.dataset.name;
+                const productPrice = productItem.dataset.price;
+
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                // Mengecek apakah produk sudah ada di keranjang
+                const existingProductIndex = cart.findIndex(item => item.id === productId);
+                if (existingProductIndex === -1) {
+                    // Menambahkan produk baru ke keranjang
+                    cart.push({ id: productId, name: productName, price: parseInt(productPrice), quantity: 1 });
+                } else {
+                    // Jika sudah ada, update kuantitasnya
+                    cart[existingProductIndex].quantity += 1;
+                }
+
+                // Simpan kembali ke localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                alert('Produk telah ditambahkan ke keranjang!');
+            });
+        });
+    </script>
+</body>
+</html>
